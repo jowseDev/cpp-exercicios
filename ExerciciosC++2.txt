@@ -1,0 +1,212 @@
+// Exercício 1: Contar números até digitar 0
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero, contador = 0;
+    cout << "Digite números inteiros (0 para sair):" << endl;
+    do {
+        cin >> numero;
+        if (numero != 0) {
+            contador++;
+        }
+    } while (numero != 0);
+    cout << "Quantidade de números digitados: " << contador << endl;
+    return 0;
+}
+
+// Exercício 2: Calculadora simples
+#include <iostream>
+using namespace std;
+
+int main() {
+    char operacao;
+    float num1, num2, resultado;
+
+    cout << "Escolha a operação (+, -, /, *, S para sair): ";
+    cin >> operacao;
+
+    if (operacao == 'S' || operacao == 's') {
+        cout << "Programa encerrado." << endl;
+    } else if (operacao == '+' || operacao == '-' || operacao == '/' || operacao == '*') {
+        cout << "Digite dois números: ";
+        cin >> num1 >> num2;
+
+        if (operacao == '+') {
+            resultado = num1 + num2;
+        } else if (operacao == '-') {
+            resultado = num1 - num2;
+        } else if (operacao == '*') {
+            resultado = num1 * num2;
+        } else if (operacao == '/') {
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                cout << "Erro: Divisão por zero." << endl;
+                return 1;
+            }
+        }
+
+        cout << "Resultado: " << resultado << endl;
+    } else {
+        cout << "Opção inválida." << endl;
+    }
+
+    return 0;
+}
+
+// Exercício 3: Números de 10 a 100
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 10; i <= 100; i++) {
+        cout << i << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+// Exercício 4: Números de 50 a 10
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 50; i >= 10; i--) {
+        cout << i << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+// Exercício 5: Números de n a m (crescente)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m;
+    cout << "Digite dois números (n e m): ";
+    cin >> n >> m;
+
+    if (n <= m) {
+        for (int i = n; i <= m; i++) {
+            cout << i << " ";
+        }
+    } else {
+        cout << "O primeiro número deve ser menor ou igual ao segundo." << endl;
+    }
+    cout << endl;
+    return 0;
+}
+
+// Exercício 6: Soma dos números pares entre 100 e 200
+#include <iostream>
+using namespace std;
+
+int main() {
+    int soma = 0;
+    for (int i = 100; i <= 200; i++) {
+        if (i % 2 == 0) {
+            soma += i;
+        }
+    }
+    cout << "Soma dos números pares entre 100 e 200: " << soma << endl;
+    return 0;
+}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Slide 1: Título - Enzo
+Título: Ética em Sistemas de Informação
+
+Subtítulo: A importância da ética no contexto da tecnologia e da informação
+
+Conteúdo para ser falado: "Olá a todos! Hoje, vamos falar sobre ética, um tema superimportante para a nossa área de Sistemas de Informação. Vamos explorar o que é ética, como ela se aplica no contexto tecnológico e qual o impacto de nossas escolhas em sistemas e informações."
+
+
+Slide 2: O que é Ética? - Krek
+ -Definição de ética
+
+ -Diferença entre moral e ética
+
+Conteúdo para ser falado: "Ética é o estudo dos princípios que guiam o comportamento humano, como distinguir o certo do errado. Ela nos ajuda a tomar decisões baseadas em valores, como justiça e respeito. Muitas vezes, confundimos ética com moral, mas enquanto moral é um conjunto de regras que uma sociedade define, a ética vai além, refletindo sobre como essas regras devem ser aplicadas e por que seguimos elas."
+
+
+Slide 3: Por que a Ética é Importante em Sistemas de Informação? - Krek
+ -Uso de dados e privacidade
+
+ -Tomada de decisões automatizadas
+
+ -Responsabilidade na criação e manutenção de sistemas
+
+Conteúdo para ser falado: "A ética é fundamental em sistemas de informação porque estamos lidando com dados e informações que podem afetar a vida das pessoas. Por exemplo, quando um sistema decide automaticamente algo importante para alguém, como em uma decisão de crédito, é necessário que a decisão seja justa e imparcial. A responsabilidade também recai sobre os desenvolvedores e profissionais da área, que devem criar sistemas que respeitem a privacidade e os direitos dos indivíduos."
+
+
+Slide 4: Princípios Éticos em TI (Tecnologia da Informação) - Krek
+ -Privacidade
+
+ -Transparência
+
+ -Equidade
+
+ -Responsabilidade
+
+Conteúdo para ser falado: "Existem alguns princípios éticos fundamentais que devem ser seguidos quando trabalhamos com tecnologia. O primeiro é a privacidade: as pessoas têm o direito de controlar suas informações pessoais. A transparência é importante, pois os usuários devem saber como seus dados estão sendo usados. Equidade significa que sistemas não devem discriminar ou prejudicar indivíduos, e por fim, a responsabilidade: quem cria e gerencia sistemas precisa responder por suas ações e impactos."
+
+
+Slide 5: Casos Práticos de Dilemas Éticos em TI - Enzo
+ -Vazamento de dados 
+
+ -Discriminação algorítmica 
+
+ -Fake news e manipulação de informações
+
+Conteúdo para ser falado: "Vamos falar de alguns exemplos reais. Em 2018, houve o caso do vazamento de dados do Facebook, em que informações de milhões de pessoas foram usadas sem seu consentimento para influenciar eleições. Outro exemplo é a discriminação algorítmica, em que alguns algoritmos, como os usados em processos seletivos, podem ser tendenciosos e excluir pessoas com base em características como raça ou gênero. E, claro, temos o problema das fake news, que se espalham rapidamente e podem manipular a opinião pública de maneira errada."
+
+
+Slide 6: Código de Ética e Legislação - Enzo
+ -Códigos de Ética em TI
+
+ -Leis de Proteção de Dados (exemplo: LGPD)
+
+ -Responsabilidade Profissional
+
+Conteúdo para ser falado: "Em muitas profissões, existem códigos de ética que guiam o comportamento dos profissionais, e isso também se aplica à área de TI. No Brasil, temos a LGPD (Lei Geral de Proteção de Dados), que garante aos cidadãos maior controle sobre suas informações pessoais e impõe regras para o tratamento desses dados. Além disso, os profissionais da área de tecnologia têm a responsabilidade profissional de agir dentro desses limites legais e éticos, protegendo sempre o bem-estar da sociedade."
+
+
+Slide 7: Como Agir de Forma Ética? - José
+ -Refletir sobre o impacto das decisões
+
+ -Garantir a transparência dos sistemas
+
+ -Fazer com que a ética seja parte da cultura da empresa ou equipe
+
+Conteúdo para ser falado: "Como profissionais de Sistemas de Informação, devemos sempre refletir sobre o impacto das decisões que tomamos. Será que o sistema que estamos criando pode prejudicar alguém? Outra coisa importante é garantir que as pessoas saibam como suas informações estão sendo usadas. E, claro, é importante que a ética seja parte da cultura da nossa equipe ou empresa. Isso pode ser feito com treinamentos e discussões abertas sobre os valores que defendemos."
+
+
+
+Slide 8: Conclusão - José
+ -Resumo dos principais pontos
+
+ -A importância de agir com responsabilidade e ética
+
+Conteúdo para ser falado: "Em resumo, ética é essencial para garantir que a tecnologia seja usada para o bem de todos. Profissionais de Sistemas de Informação têm a responsabilidade de agir de forma ética, refletindo sobre o impacto de suas ações. Devemos sempre buscar o equilíbrio entre inovação e respeito aos direitos e privacidade dos indivíduos."
+
+

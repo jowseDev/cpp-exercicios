@@ -1,0 +1,256 @@
+// Exercício 1: Mensagem inicial
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Sou calouro de BSI!!!!" << endl;
+    return 0;
+}
+
+// Exercício 2: Quatro mensagens
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Meu nome é: José Augusto." << endl;
+    cout << "Sou do curso de Sistemas de Informação." << endl;
+    cout << "Estou no primeiro ano." << endl;
+    cout << "Gosto de programação!!!" << endl;
+    return 0;
+}
+
+// Exercício 3: Área e perímetro do círculo
+#include <iostream>
+using namespace std;
+
+int main() {
+    float r, area, perimetro;
+    const float PI = 3.14;
+    cout << "Digite o raio do círculo: ";
+    cin >> r;
+    area = PI * r * r;
+    perimetro = 2 * PI * r;
+    cout << "Área: " << area << endl;
+    cout << "Perímetro: " << perimetro << endl;
+    return 0;
+}
+
+// Exercício 4: Desconto em produto
+#include <iostream>
+using namespace std;
+
+int main() {
+    string nome;
+    float valor, desconto, valorFinal;
+    cout << "Digite o nome do produto: ";
+    cin >> nome;
+    cout << "Digite o valor do produto: ";
+    cin >> valor;
+    desconto = valor * 0.13;
+    valorFinal = valor - desconto;
+    cout << "Produto: " << nome << endl;
+    cout << "Valor: " << valor << endl;
+    cout << "Desconto: " << desconto << endl;
+    cout << "Valor Final: " << valorFinal << endl;
+    return 0;
+}
+
+// Exercício 5: Positivo ou negativo (zero é positivo)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor;
+    cout << "Digite um número: ";
+    cin >> valor;
+    if (valor >= 0)
+        cout << "Número positivo" << endl;
+    else
+        cout << "Número negativo" << endl;
+    return 0;
+}
+
+// Exercício 6: Positivo, negativo ou zero
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor;
+    cout << "Digite um número: ";
+    cin >> valor;
+    if (valor > 0)
+        cout << "Número positivo" << endl;
+    else if (valor < 0)
+        cout << "Número negativo" << endl;
+    else
+        cout << "Zero" << endl;
+    return 0;
+}
+
+// Exercício 7: Cardápio
+#include <iostream>
+using namespace std;
+
+int main() {
+    int codigo, qtd;
+    float total;
+    cout << "Digite o código do item: ";
+    cin >> codigo;
+    cout << "Digite a quantidade: ";
+    cin >> qtd;
+
+    if (codigo == 100) total = 9.20 * qtd;
+    else if (codigo == 101) total = 12.00 * qtd;
+    else if (codigo == 102) total = 13.00 * qtd;
+    else if (codigo == 103) total = 10.00 * qtd;
+    else if (codigo == 104) total = 12.00 * qtd;
+    else if (codigo == 105) total = 5.00 * qtd;
+    else if (codigo == 106) total = 3.00 * qtd;
+    else {
+        cout << "Código inválido" << endl;
+        return 0;
+    }
+    cout << "Total a pagar: R$ " << total << endl;
+    return 0;
+}
+
+// Exercício 8: Peso ideal
+#include <iostream>
+using namespace std;
+
+int main() {
+    float h, pesoIdeal;
+    char sexo;
+    cout << "Digite a altura: ";
+    cin >> h;
+    cout << "Digite o sexo (M/F): ";
+    cin >> sexo;
+    if (sexo == 'M' || sexo == 'm')
+        pesoIdeal = (72.7 * h) - 58;
+    else if (sexo == 'F' || sexo == 'f')
+        pesoIdeal = (62.1 * h) - 44.7;
+    else {
+        cout << "Sexo inválido" << endl;
+        return 0;
+    }
+    cout << "Peso ideal: " << pesoIdeal << " kg" << endl;
+    return 0;
+}
+
+// Exercício 9: Par ou ímpar
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Digite um número inteiro: ";
+    cin >> num;
+    if (num % 2 == 0)
+        cout << "Número par" << endl;
+    else
+        cout << "Número ímpar" << endl;
+    return 0;
+}
+
+// Exercício 10: Média e conceito
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mat;
+    float n1, n2, n3, media;
+    cout << "Digite a matrícula do aluno: ";
+    cin >> mat;
+    cout << "Digite as 3 notas: ";
+    cin >> n1 >> n2 >> n3;
+    media = (n1 + (n2 * 2) + (n3 * 3)) / 6;
+
+    cout << "Média: " << media << endl;
+    if (media >= 9)
+        cout << "Conceito A - APROVADO" << endl;
+    else if (media >= 7.5)
+        cout << "Conceito B - APROVADO" << endl;
+    else if (media >= 6)
+        cout << "Conceito C - APROVADO" << endl;
+    else if (media >= 4)
+        cout << "Conceito D - REPROVADO" << endl;
+    else
+        cout << "Conceito E - REPROVADO" << endl;
+    return 0;
+}
+
+// Exercício 11: Contar negativos
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, negativos = 0;
+    for (int i = 1; i <= 15; i++) {
+        cout << "Digite um número: ";
+        cin >> num;
+        if (num < 0) negativos++;
+    }
+    cout << "Quantidade de negativos: " << negativos << endl;
+    return 0;
+}
+
+// Exercício 12: Média de 20 valores
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, soma = 0;
+    for (int i = 0; i < 20; i++) {
+        cout << "Digite um número: ";
+        cin >> num;
+        soma += num;
+    }
+    cout << "Média: " << soma / 20.0 << endl;
+    return 0;
+}
+
+// Exercício 13: Média dos pares
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, soma = 0, cont = 0;
+    for (int i = 0; i < 20; i++) {
+        cout << "Digite um número: ";
+        cin >> num;
+        if (num % 2 == 0) {
+            soma += num;
+            cont++;
+        }
+    }
+    if (cont > 0)
+        cout << "Média dos pares: " << soma / (float)cont << endl;
+    else
+        cout << "Nenhum número par digitado." << endl;
+    return 0;
+}
+
+// Exercício 14: Pesquisa da prefeitura
+#include <iostream>
+using namespace std;
+
+int main() {
+    float salario, somaSalario = 0, maiorSalario = 0;
+    int filhos, somaFilhos = 0;
+    for (int i = 1; i <= 15; i++) {
+        cout << "Habitante " << i << ":" << endl;
+        cout << "Digite o salário: ";
+        cin >> salario;
+        cout << "Digite o número de filhos: ";
+        cin >> filhos;
+        somaSalario += salario;
+        somaFilhos += filhos;
+        if (salario > maiorSalario)
+            maiorSalario = salario;
+    }
+    cout << "Média salarial: R$ " << somaSalario / 15 << endl;
+    cout << "Média de filhos: " << somaFilhos / 15.0 << endl;
+    cout << "Maior salário: R$ " << maiorSalario << endl;
+    return 0;
+}
+4
