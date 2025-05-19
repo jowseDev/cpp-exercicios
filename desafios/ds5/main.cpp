@@ -14,9 +14,5 @@ int main()
     }else{
     cout << "Voçê é adulto!" << endl;
     }
-
-
-
-
     return 0;
 }
