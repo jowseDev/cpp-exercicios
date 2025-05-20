@@ -14,6 +14,6 @@ int main()
     int a, b;
     a = obtem_valor();
     b = obtem_valor();
-    cout << "Soma= " << a + b << endl;
+    cout << "Soma: " << a + b << endl;
     return 0;
 }
