@@ -1,39 +1,46 @@
 #include <iostream>
-#include <fstream> // Para manipular arquivos
-#include <iomanip> // Para formatar valores decimais
+#include <fstream>
+#include <iomanip>
 
 using namespace std;
-struct Produto {
+struct Produto
+{
     int codigo;
     float precoCusto;
     float precoVenda;
     int estoque;
 };
-float calcularLucro(const Produto &p) {
+float calcularLucro(const Produto p)
+{
     return (p.precoVenda - p.precoCusto) * p.estoque;
 }
 
-int main() {
+int main()
+{
     int n;
 
-    cout << "Programa para cadastrar Produtos e calcular LUCRO.\n" << endl;
+    cout << "Programa para cadastrar Produtos e calcular LUCRO.\n"
+         << endl;
 
-    cout << "Quantos produtos você vai cadastrar? ";
+    cout << "Quantos produtos vocï¿½ vai cadastrar? ";
     cin >> n;
 
     Produto produtos[n];
 
     ofstream arquivo("produtos_lucro.txt");
 
-    arquivo << "Programa para cadastrar Produtos e calcular LUCRO.\n" << endl;
-    arquivo << "Quantos produtos você vai cadastrar?\n" << endl;
+    arquivo << "Programa para cadastrar Produtos e calcular LUCRO.\n"
+            << endl;
+    arquivo << "Quantos produtos vocï¿½ vai cadastrar?\n"
+            << endl;
 
-    for (int i = 0; i < n; i++) {
-        cout << "\nINFORME O CÓDIGO DO PRODUTO: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << "\nINFORME O Cï¿½DIGO DO PRODUTO: ";
         cin >> produtos[i].codigo;
-        cout << "INFORME O PREÇO DE CUSTO DO PRODUTO: ";
+        cout << "INFORME O PREï¿½O DE CUSTO DO PRODUTO: ";
         cin >> produtos[i].precoCusto;
-        cout << "INFORME O PREÇO DE VENDA DO PRODUTO: ";
+        cout << "INFORME O PREï¿½O DE VENDA DO PRODUTO: ";
         cin >> produtos[i].precoVenda;
         cout << "INFORME A QUANTIDADE EM ESTOQUE DO PRODUTO: ";
         cin >> produtos[i].estoque;
@@ -42,10 +49,14 @@ int main() {
 
         cout << fixed << setprecision(2);
         cout << "O Produto: " << produtos[i].codigo << " pode gerar R$ " << lucro << " de lucro." << endl;
-        arquivo << "INFORME O CÓDIGO DO PRODUTO:\n" << produtos[i].codigo << "\n";
-        arquivo << "INFORME O PREÇO DE CUSTO DO PRODUTO:\n" << produtos[i].precoCusto << "\n";
-        arquivo << "INFORME O PREÇO DE VENDA DO PRODUTO:\n" << produtos[i].precoVenda << "\n";
-        arquivo << "INFORME A QUANTIDADE EM ESTOQUE DO PRODUTO:\n" << produtos[i].estoque << "\n";
+        arquivo << "INFORME O Cï¿½DIGO DO PRODUTO:\n"
+                << produtos[i].codigo << "\n";
+        arquivo << "INFORME O PREï¿½O DE CUSTO DO PRODUTO:\n"
+                << produtos[i].precoCusto << "\n";
+        arquivo << "INFORME O PREï¿½O DE VENDA DO PRODUTO:\n"
+                << produtos[i].precoVenda << "\n";
+        arquivo << "INFORME A QUANTIDADE EM ESTOQUE DO PRODUTO:\n"
+                << produtos[i].estoque << "\n";
         arquivo << fixed << setprecision(2);
         arquivo << "O Produto: " << produtos[i].codigo << " pode gerar R$ " << lucro << " de lucro.\n\n";
     }
